@@ -2,7 +2,8 @@ from django.urls import path
 
 from . import views
 
-app_name = 'polls'
+app_name = 'exchangeRate'
 urlpatterns = [
-    #path('', views.IndexView.as_view(), name='index'),
+    path('', views.Main.as_view(), name='main'),
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
 ]
